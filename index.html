@@ -7,278 +7,303 @@
 <meta name="theme-color" content="#151515">
 <title>Communica Pretoria | Share your experience</title>
 <style>
-:root{
-  --black:#171717;
-  --red:#d51d30;
-  --paper:#f7f7f7;
-}
+:root{--black:#171717;--red:#d51d30;--paper:#f7f7f7;--muted:#626262}
 *{box-sizing:border-box}
-body{
-  margin:0;background:var(--paper);
-  color:var(--black);
-  font-family:system-ui,-apple-system,Arial,sans-serif
-}
-.wrap{max-width:510px;margin:auto;padding:16px 16px 28px}
-.mast{
-  background:#171717;color:white;
-  border-radius:18px;text-align:center;
-  padding:25px 14px 19px;
-  position:relative;overflow:hidden
-}
-.mast:before{
-  content:"";position:absolute;top:0;left:0;right:0;
-  height:5px;background:var(--red)
-}
-.brand{
-  font-size:clamp(30px,9vw,43px);
-  font-weight:900;letter-spacing:.045em
-}
-.branch{letter-spacing:.28em;font-size:12px;color:#ddd}
-.accent{
-  width:43px;height:4px;background:var(--red);
-  border-radius:9px;margin:17px auto 0
-}
-h1{
-  font-size:clamp(25px,7vw,32px);
-  line-height:1.14;text-align:center;
-  margin:24px 0 10px;letter-spacing:-.04em
-}
-.intro{
-  font-size:15px;text-align:center;
-  line-height:1.5;color:#4b4b4b;
-  margin:0 8px 20px
-}
+body{margin:0;background:var(--paper);color:var(--black);font-family:system-ui,-apple-system,Arial,sans-serif}
+.wrap{max-width:510px;margin:0 auto;padding:16px 16px 28px}
+.mast{background:#171717;color:white;border-radius:18px;overflow:hidden;text-align:center;padding:25px 14px 19px;position:relative}
+.mast:before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:var(--red)}
+.brand{font-size:clamp(30px,9vw,43px);font-weight:900;letter-spacing:.045em}
+.branch{letter-spacing:.28em;font-size:12px;margin-top:4px;color:#ddd}
+.accent{width:43px;height:4px;border-radius:9px;background:var(--red);margin:17px auto 0}
+h1{font-size:clamp(25px,7vw,32px);line-height:1.14;letter-spacing:-.04em;text-align:center;margin:24px 0 10px}
+.intro{font-size:15px;text-align:center;line-height:1.5;color:#4b4b4b;margin:0 8px 20px}
 .name{font-weight:800;color:#c91e30}
-.card{
-  background:white;border:1px solid #e1e1e1;
-  border-radius:18px;padding:19px;
-  box-shadow:0 8px 25px rgba(0,0,0,.045)
-}
-label{
-  font-size:13px;font-weight:800;
-  display:block;margin-bottom:9px
-}
-select,textarea{
-  font:inherit;width:100%;background:white;
-  border:1.5px solid #d4d4d4;
-  border-radius:11px;padding:13px;color:#171717
-}
-select:focus,textarea:focus{
-  outline:2px solid var(--red);outline-offset:1px
-}
-.review-prefix{
-  display:none;margin-top:12px;
-  padding:12px 13px 0;
-  border:1.5px solid #d4d4d4;
-  border-bottom:0;
-  border-radius:11px 11px 0 0;
-  font-size:15px;line-height:1.45
-}
+.card{background:white;border:1px solid #e1e1e1;border-radius:18px;padding:19px;box-shadow:0 8px 25px rgba(0,0,0,.045)}
+label{font-size:13px;font-weight:800;display:block;margin:0 0 9px}
+select,textarea{font:inherit;width:100%;background:#fff;border:1.5px solid #d4d4d4;border-radius:11px;padding:13px;color:#171717}
+select:focus,textarea:focus{outline:2px solid #d51d30;outline-offset:1px}
+.review-prefix{display:none;margin-top:12px;padding:12px 13px 0;border:1.5px solid #d4d4d4;border-bottom:0;border-radius:11px 11px 0 0;font-size:15px;line-height:1.45;color:#171717}
 .review-prefix.visible{display:block}
-.review-prefix.visible+textarea{
-  margin-top:0;border-top:0;
-  border-radius:0 0 11px 11px;padding-top:5px
-}
-textarea{
-  min-height:112px;resize:vertical;
-  line-height:1.45;margin-top:12px
-}
+.review-prefix.visible+textarea{margin-top:0;border-top:0;border-radius:0 0 11px 11px;padding-top:5px}
 textarea::placeholder{color:#929292;opacity:1}
-button,.google{
-  display:block;width:100%;
-  padding:15px 12px;text-align:center;
-  font-weight:800;font-size:15px;
-  border-radius:11px;cursor:pointer
+textarea{min-height:112px;resize:vertical;line-height:1.45;margin-top:12px}
+button,.google{display:block;width:100%;padding:15px 12px;text-align:center;font-weight:800;font-size:15px;border-radius:11px;cursor:pointer}
+button{background:#171717;color:white;border:0;margin-top:12px}
+.google{background:var(--red);color:white;text-decoration:none;margin-top:15px;border:0}
+.google:active,button:active{transform:scale(.99)}
+.note{font-size:12px;color:#666;line-height:1.5;margin:12px 0 0}
+.status{font-size:13px;color:#116d3b;text-align:center;min-height:20px;margin:10px 0 0}
+footer{text-align:center;font-size:11px;color:#777;line-height:1.55;margin-top:19px}
+.footline{width:34px;height:3px;background:var(--red);margin:0 auto 11px;border-radius:8px}
+@media(max-height:720px){.mast{padding:17px 10px 13px}h1{margin:16px 0 6px}.intro{margin-bottom:12px}.card{padding:13px}textarea{min-height:78px}}
+
+/* Compact help strip — original design retained */
+.quick-guide{background:#fff;border:1px solid #e1e1e1;border-radius:14px;padding:12px;margin:0 0 14px;text-align:center}
+.quick-guide .guide-title{font-size:12px;font-weight:800;margin-bottom:9px}
+.guide-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+.guide-step{border:1px solid #e7e7e7;background:#fafafa;color:#171717;border-radius:9px;padding:9px 2px;font-size:11px;font-weight:700;cursor:pointer;margin:0;width:auto;line-height:1.2}
+.guide-step[aria-pressed="true"]{background:#171717;color:#fff;border-color:#171717}
+.guide-detail{min-height:30px;margin:9px 0 0;font-size:12px;line-height:1.35;color:#555}
+.guide-focus{outline:3px solid #16a34a!important;outline-offset:3px}
+
+/* Gentle guided animation; no layout movement or forced scrolling */
+.guide-step{transition:background .3s,color .3s,transform .3s,box-shadow .3s}
+.guide-step.is-active{background:#1677e8!important;color:white!important;box-shadow:0 0 0 3px rgba(22,119,232,.16);transform:translateY(-2px)}
+.guide-detail{min-height:34px;transition:opacity .25s}
+.guide-progress{height:3px;background:#ead7d9;border-radius:8px;overflow:hidden;margin-top:10px}
+.guide-progress-fill{height:100%;background:#1677e8;width:0}
+.guide-controls{display:flex;justify-content:space-between;align-items:center;margin-top:8px;gap:8px}
+.guide-controls button{width:auto;margin:0;padding:6px 9px;border:0;background:transparent;color:#555;font-size:12px;font-weight:700}
+.guide-focus{outline:3px solid #16a34a!important;outline-offset:3px;transition:outline-color .3s}
+@media(prefers-reduced-motion:reduce){.guide-step,.guide-detail,.guide-focus{transition:none!important}.guide-step.is-active{transform:none}}
+
+/* Guided mode: pulse the real next action, not the tutorial cards. */
+@keyframes nextActionPulse{0%,100%{outline-color:#16a34a;box-shadow:0 0 0 2px rgba(22,163,74,.16)}50%{outline-color:#22c55e;box-shadow:0 0 0 8px rgba(22,163,74,.22)}}
+.guide-next{outline:3px solid #16a34a!important;outline-offset:3px;animation:nextActionPulse 1.35s ease-in-out infinite!important}
+@media(prefers-reduced-motion:reduce){.guide-next{animation:none!important;box-shadow:0 0 0 3px rgba(22,163,74,.18)}}
+/* High-visibility, three-colour blink for the final two real actions only. */
+@keyframes finalActionBlink{
+  0%, 100% {outline:4px solid #16a34a;outline-offset:4px;box-shadow:0 0 0 3px rgba(22,163,74,.20);filter:brightness(1)}
+  17% {outline:4px solid #16a34a;outline-offset:4px;box-shadow:0 0 0 9px rgba(22,163,74,.30);filter:brightness(1.07)}
+  33% {outline:4px solid #1677e8;outline-offset:4px;box-shadow:0 0 0 3px rgba(22,119,232,.22);filter:brightness(1)}
+  50% {outline:4px solid #1677e8;outline-offset:4px;box-shadow:0 0 0 9px rgba(22,119,232,.32);filter:brightness(1.07)}
+  67% {outline:4px solid #f59e0b;outline-offset:4px;box-shadow:0 0 0 3px rgba(245,158,11,.22);filter:brightness(1)}
+  83% {outline:4px solid #f59e0b;outline-offset:4px;box-shadow:0 0 0 9px rgba(245,158,11,.32);filter:brightness(1.07)}
 }
-button{
-  background:#171717;color:white;
-  border:0;margin-top:12px
-}
-.google{
-  background:var(--red);color:white;
-  text-decoration:none;margin-top:15px
-}
-.note{
-  font-size:12px;color:#666;
-  line-height:1.5;margin:12px 0 0
-}
-.status{
-  font-size:13px;color:#116d3b;
-  text-align:center;min-height:20px;margin-top:10px
-}
-footer{
-  text-align:center;font-size:11px;
-  color:#777;line-height:1.55;margin-top:19px
-}
-.footline{
-  width:34px;height:3px;background:var(--red);
-  margin:0 auto 11px;border-radius:8px
-}
-@media(max-height:720px){
-  .mast{padding:17px 10px 13px}
-  h1{margin:16px 0 6px}
-  .intro{margin-bottom:12px}
-  .card{padding:13px}
-  textarea{min-height:78px}
-}
+.guide-next.guide-final-blink{animation:finalActionBlink 1.35s steps(1,end) infinite!important}
+@media(prefers-reduced-motion:reduce){.guide-next.guide-final-blink{animation:none!important;outline:4px solid #16a34a!important;box-shadow:0 0 0 4px rgba(22,163,74,.2)!important;filter:none!important}}
 </style>
 </head>
 <body>
 <main class="wrap">
-
 <header class="mast">
-  <div class="brand">COMMUNICA</div>
-  <div class="branch">PRETORIA</div>
-  <div class="accent"></div>
+<div class="brand">COMMUNICA</div>
+<div class="branch">PRETORIA</div>
+<div class="accent"></div>
 </header>
-
 <h1>HOW WAS YOUR<br>EXPERIENCE?</h1>
-
-<p class="intro" id="intro">
-Tell us about your visit to Communica Pretoria.
-Every experience matters.
-</p>
-
-<section class="card">
-  <label for="example">
-    CHOOSE A STARTING POINT
-    <span style="font-weight:400;color:#777">
-      (optional)
-    </span>
-  </label>
-
-  <select id="example">
-    <option value="">Write my own review</option>
-    <option value="help">Helpful assistance</option>
-    <option value="info">Product information</option>
-    <option value="store">Store experience</option>
-  </select>
-
-  <div id="prefix" class="review-prefix"
-       aria-live="polite"></div>
-
-  <textarea id="review"
-    aria-label="Your review"
-    placeholder="Share what happened during your visit...">
-  </textarea>
-
-  <button id="copy" type="button">
-    COPY MY REVIEW
-  </button>
-
-  <p class="note">
-    These are optional examples, not pre-written
-    testimonials. Please use your own words and
-    share your genuine experience, whether positive,
-    neutral or negative.
-  </p>
+<p class="intro" id="intro">Tell us about your visit to Communica Pretoria. Every experience matters.</p>
+<section class="quick-guide" aria-label="Quick guide to sharing a review">
+<div class="guide-title">NEW HERE? FOLLOW THESE 4 EASY STEPS</div>
+<div class="guide-steps">
+<button class="guide-step" type="button" data-step="0" aria-pressed="true">① Choose</button>
+<button class="guide-step" type="button" data-step="1" aria-pressed="false">② Type</button>
+<button class="guide-step" type="button" data-step="2" aria-pressed="false">③ Copy</button>
+<button class="guide-step" type="button" data-step="3" aria-pressed="false">④ Rate</button>
+</div>
+<p class="guide-detail" id="guide-detail">Choose a starting point, or write your own review.</p>
+<div class="guide-progress" aria-hidden="true"><div class="guide-progress-fill" id="guide-progress-fill"></div></div>
+<div class="guide-controls">
+<span style="font-size:11px;color:#777" id="guide-status">Quick demonstration</span>
+<button type="button" id="guide-toggle" aria-label="Pause demonstration">Pause guide</button>
+</div>
 </section>
-
-<a class="google"
- href="https://search.google.com/local/writereview?placeid=ChIJ_8G41mxilR4RCd9egovO-1U"
- target="_blank"
- rel="noopener noreferrer">
- CONTINUE TO GOOGLE REVIEWS ↗
-</a>
-
-<div class="status" id="status"
- role="status" aria-live="polite"></div>
-
+<section class="card">
+<label for="example">CHOOSE A STARTING POINT <span style="font-weight:400;color:#777">(optional)</span></label>
+<select id="example">
+<option value="">Write my own review</option>
+<option value="help">Helpful assistance</option>
+<option value="info">Product information</option>
+<option value="store">Store experience</option>
+</select>
+<div id="prefix" class="review-prefix" aria-live="polite"></div>
+<textarea id="review" aria-label="Your review" placeholder="Share what happened during your visit..."></textarea>
+<button id="copy" type="button">COPY MY REVIEW</button>
+<p class="note">These are optional examples, not pre-written testimonials. Please use your own words and share your genuine experience, whether positive, neutral or negative.</p>
+</section>
+<a class="google" href="https://search.google.com/local/writereview?placeid=ChIJ_8G41mxilR4RCd9egovO-1U" target="_blank" rel="noopener noreferrer">CONTINUE TO GOOGLE REVIEWS ↗</a>
+<div class="status" id="status" role="status" aria-live="polite"></div>
 <footer>
-  <div class="footline"></div>
-  Google may ask you to sign in.
-  Choose your own rating and submit your review.
-  <p>Thank you for visiting Communica Pretoria.</p>
+<div class="footline"></div>
+Google may ask you to sign in. Choose your own rating and submit your review.<br>
+Thank you for visiting Communica Pretoria.
 </footer>
-
 </main>
-
 <script>
-const staff=[
-  'Shepherd',
-  'Decent',
-  'Unita',
-  'Vannesa',
-  'Farhana',
-  'Mushaan'
-];
-
-const key=new URLSearchParams(
-  location.search
-).get('staff')||'';
-
-const person=staff.find(
-  n=>n.toLowerCase()===key.toLowerCase()
-);
-
+const staff=['Shepherd','Decent','Unita','Vannesa','Farhana','Mushaan'];
+const key=new URLSearchParams(location.search).get('staff')||'';
+const person=staff.find(n=>n.toLowerCase()===key.toLowerCase());
 const intro=document.getElementById('intro');
-
 if(person){
-  intro.innerHTML=
-    'Assisted by <span class="name">'+
-    person+
-    '</span>? We would love to hear about your experience.';
+ intro.innerHTML='Assisted by <span class="name">'+person+'</span>? We would love to hear about your experience.';
 }
-
-const sel=document.getElementById('example');
-const area=document.getElementById('review');
-const prefix=document.getElementById('prefix');
-
+const sel=document.getElementById('example'),area=document.getElementById('review'),prefix=document.getElementById('prefix');
 const samples={
-  help:person
-    ?'I was assisted by '+person+' at Communica Pretoria.'
-    :'I received assistance at Communica Pretoria.',
-
-  info:person
-    ?'I spoke with '+person+' about products at Communica Pretoria.'
-    :'I asked about products at Communica Pretoria.',
-
-  store:'I visited Communica Pretoria and would like to share my experience.'
+ help:person?'I was assisted by '+person+' at Communica Pretoria.':'I received assistance at Communica Pretoria.',
+ info:person?'I spoke with '+person+' about products at Communica Pretoria.':'I asked about products at Communica Pretoria.',
+ store:'I visited Communica Pretoria and would like to share my experience.'
 };
-
 sel.addEventListener('change',()=>{
-  const sentence=sel.value?samples[sel.value]:'';
-
-  prefix.textContent=sentence;
-  prefix.classList.toggle('visible',Boolean(sentence));
-
-  area.value='';
-  area.placeholder=sentence
-    ?'Continue in your own words...'
-    :'Share what happened during your visit...';
-
-  document.getElementById('status').textContent='';
+ const sentence=sel.value?samples[sel.value]:'';
+ prefix.textContent=sentence;
+ prefix.classList.toggle('visible',Boolean(sentence));
+ area.value='';
+ area.placeholder=sentence?'Continue in your own words...':'Share what happened during your visit...';
+ document.getElementById('status').textContent='';
+});
+document.getElementById('copy').addEventListener('click',async()=>{
+ const status=document.getElementById('status');
+ const ownWords=area.value.trim();
+ if(!ownWords){
+  status.textContent='Please describe your experience in your own words first.';
+  area.focus();
+  return;
+ }
+ const review=[prefix.textContent.trim(),ownWords].filter(Boolean).join(' ');
+ try{
+  await navigator.clipboard.writeText(review);
+  status.textContent='Copied! Continue to Google to paste your review.';
+ }catch(e){
+  status.textContent='Copy is unavailable here. Select your text and use Copy.';
+  area.focus();
+  area.select();
+ }
 });
 
-document.getElementById('copy').addEventListener(
-  'click',async()=>{
-    const status=document.getElementById('status');
-    const ownWords=area.value.trim();
+// Automatic demo until the customer interacts, then guide real actions.
+const guideDetails=[
+ '① Choose an optional starting point, or tap the writing box to write your own review.',
+ '② Type what happened during your visit in your own words.',
+ '③ Tap COPY MY REVIEW to copy your completed review.',
+ '④ Tap CONTINUE TO GOOGLE REVIEWS, choose your rating, paste and post.'
+];
+const guideTargets=[
+ document.getElementById('example'),
+ document.getElementById('review'),
+ document.getElementById('copy'),
+ document.querySelector('.google')
+];
+const guideButtons=[...document.querySelectorAll('.guide-step')];
+const guideText=document.getElementById('guide-detail');
+const guideFill=document.getElementById('guide-progress-fill');
+const guideToggle=document.getElementById('guide-toggle');
+const guideStatus=document.getElementById('guide-status');
+const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const duration=2600;
+let current=0,playing=false,guideInterval=null,phase='demo',copied=false;
 
-    if(!ownWords){
-      status.textContent=
-        'Please describe your experience in your own words first.';
-      area.focus();
-      return;
-    }
-
-    const review=[
-      prefix.textContent.trim(),
-      ownWords
-    ].filter(Boolean).join(' ');
-
-    try{
-      await navigator.clipboard.writeText(review);
-      status.textContent=
-        'Copied! Continue to Google to paste your review.';
-    }catch(e){
-      status.textContent=
-        'Copy is unavailable here. Select your text and use Copy.';
-      area.focus();
-      area.select();
-    }
-  }
-);
+function clearTargets(){
+ guideTargets.forEach(el=>el.classList.remove('guide-focus','guide-next','guide-final-blink'));
+}
+function showGuideStep(i){
+ current=i;
+ guideButtons.forEach((b,j)=>{
+  b.classList.toggle('is-active',i===j);
+  b.setAttribute('aria-pressed',String(i===j));
+ });
+ clearTargets();
+ if(phase==='demo' && playing)guideTargets[i].classList.add('guide-focus');
+ if(phase==='guided'){
+  guideTargets[i].classList.add('guide-next');
+  if(i>=2)guideTargets[i].classList.add('guide-final-blink');
+ }
+ guideText.textContent=guideDetails[i];
+ guideFill.style.transition='none';
+ guideFill.style.width='0%';
+ if(phase==='demo' && playing){
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+   if(phase==='demo' && playing){
+    guideFill.style.transition='width '+duration+'ms linear';
+    guideFill.style.width='100%';
+   }
+  }));
+ }
+}
+function stopTimer(){
+ playing=false;
+ clearInterval(guideInterval);
+ guideInterval=null;
+}
+function startGuide(){
+ if(phase!=='demo')return;
+ stopTimer();
+ playing=true;
+ guideToggle.textContent='Pause guide';
+ guideToggle.setAttribute('aria-label','Pause demonstration');
+ guideStatus.textContent='Automatic demonstration';
+ showGuideStep(current);
+ guideInterval=setInterval(()=>showGuideStep((current+1)%4),duration);
+}
+function pauseGuide(){
+ stopTimer();
+ clearTargets();
+ guideFill.style.transition='none';
+ guideFill.style.width='0%';
+ guideToggle.textContent='Play guide';
+ guideToggle.setAttribute('aria-label','Play demonstration');
+ guideStatus.textContent='Demonstration paused';
+}
+function guidedStep(i){
+ if(phase==='complete')return;
+ stopTimer();
+ phase='guided';
+ guideToggle.hidden=true;
+ guideStatus.textContent='Your next step is highlighted in green';
+ showGuideStep(i);
+}
+sel.addEventListener('focus',()=>{
+ if(phase==='demo')guidedStep(0);
+});
+sel.addEventListener('change',()=>{
+ copied=false;
+ guidedStep(1);
+});
+area.addEventListener('focus',()=>{
+ if(phase==='demo'||(phase==='guided'&&current===0))guidedStep(1);
+});
+area.addEventListener('input',()=>{
+ copied=false;
+ if(area.value.trim())guidedStep(2);
+ else if(phase==='guided')guidedStep(1);
+});
+document.getElementById('copy').addEventListener('click',async()=>{
+ if(!area.value.trim()){
+  guidedStep(1);
+  return;
+ }
+ await new Promise(resolve=>setTimeout(resolve,100));
+ if(document.getElementById('status').textContent.startsWith('Copied!')){
+  copied=true;
+  guidedStep(3);
+ }else{
+  guidedStep(2);
+ }
+});
+const copyObserver=new MutationObserver(()=>{
+ if(phase==='guided' && area.value.trim() && document.getElementById('status').textContent.startsWith('Copied!')){
+  copied=true;
+  guidedStep(3);
+ }
+});
+copyObserver.observe(document.getElementById('status'),{
+ childList:true,characterData:true,subtree:true
+});
+guideTargets[3].addEventListener('click',()=>{
+ stopTimer();
+ phase='complete';
+ clearTargets();
+});
+guideButtons.forEach((btn,i)=>btn.addEventListener('click',()=>{
+ if(phase==='demo'){
+  pauseGuide();
+  showGuideStep(i);
+ }else if(phase==='guided'){
+  guideText.textContent=guideDetails[i];
+ }
+}));
+guideToggle.addEventListener('click',()=>playing?pauseGuide():startGuide());
+document.addEventListener('visibilitychange',()=>{
+ if(document.hidden && phase==='demo' && playing)pauseGuide();
+ else if(!document.hidden && phase==='demo' && !reducedMotion)startGuide();
+});
+if(!reducedMotion){
+ startGuide();
+}else{
+ showGuideStep(0);
+ guideToggle.textContent='Play guide';
+ guideStatus.textContent='Guide ready';
+}
 </script>
 </body>
 </html>
